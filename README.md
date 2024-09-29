@@ -1,12 +1,27 @@
-# my-chrome-extension
-Building custom chrome extension
+# My Chrome Extension
 
-# File structure 
+## Description
 
-Manifest.json 
-+   The manifest.json file is required by every Chrome extension. It tells Chrome about the extension, including its name, version, permissions, etc.
-+   manifest_version: Specifies the Chrome Extension Manifest version. We use version 3 (MV3) as it’s the latest.
-+   name, description, and version: Basic metadata for your extension.
-+   action: Defines a popup (popup.html) and the icons for your extension.
-+   permissions: Lists permissions, such as storage or access to the current active tab.
-+   background: Specifies the background service worker script (background.js), which can run tasks in the background.
+This is a simple Chrome extension built using JavaScript, HTML, and CSS. It adds a popup that allows users to change the background color of the current tab to light blue. The extension also includes a background script that runs when the extension is installed.
+
+## Features
+
+- Displays a popup with a button to change the background color of the current web page.
+- Utilizes Chrome's `tabs` and `scripting` APIs to manipulate the current tab's content.
+- Runs a background service worker that logs a message upon installation.
+
+## File Structure
+
+```plaintext
+my-chrome-extension/
+│
+├── manifest.json          # Chrome extension manifest file
+├── background.js          # Background service worker
+├── popup/
+│   ├── popup.html         # HTML for the popup UI
+│   ├── popup.js           # JavaScript for popup behavior
+│   └── popup.css          # CSS for popup styling (optional)
+└── icons/
+    ├── icon16.png         # Icon for toolbar (16x16)
+    ├── icon48.png         # Icon for Chrome Web Store (48x48)
+    └── icon128.png        # Larger icon for display (128x128)
