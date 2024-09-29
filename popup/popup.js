@@ -1,13 +1,3 @@
-document.getElementById('changeColor').addEventListener('click', function() {
-    // Changes the background color of the current tab
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.scripting.executeScript({
-            target: {tabId: tabs[0].id},
-            function: setPageBackgroundColor
-        });
-    });
+document.getElementById('SendAlert').addEventListener('click', function() {
+    alert("This is a click");
 });
-
-function setPageBackgroundColor() {
-    document.body.style.backgroundColor = 'lightblue';
-}
